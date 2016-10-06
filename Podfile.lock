@@ -1,0 +1,12 @@
+PODS:
+  - FlickrKit (1.0.8)
+
+DEPENDENCIES:
+  - FlickrKit
+
+SPEC CHECKSUMS:
+  FlickrKit: beadf880a10ccaa2f13666d04112324fe08815e2
+
+PODFILE CHECKSUM: b490c00a04f294fa1456886951efedb055cdd8df
+
+COCOAPODS: 1.1.0.rc.2

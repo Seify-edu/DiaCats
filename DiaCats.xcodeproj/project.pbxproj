@@ -7,15 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		482CA070E1A8B1A623578FB5 /* libPods-DiaCats.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B1B678C640060201A71703 /* libPods-DiaCats.a */; };
 		601C59601DA64DF1004B36BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C595F1DA64DF1004B36BB /* main.m */; };
 		601C59631DA64DF1004B36BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C59621DA64DF1004B36BB /* AppDelegate.m */; };
 		601C59661DA64DF1004B36BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C59651DA64DF1004B36BB /* ViewController.m */; };
 		601C59691DA64DF1004B36BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601C59671DA64DF1004B36BB /* Main.storyboard */; };
 		601C596B1DA64DF1004B36BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 601C596A1DA64DF1004B36BB /* Assets.xcassets */; };
 		601C596E1DA64DF1004B36BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601C596C1DA64DF1004B36BB /* LaunchScreen.storyboard */; };
+		601C59771DA65153004B36BB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601C59761DA65153004B36BB /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		601C598B1DA654EB004B36BB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		30B1B678C640060201A71703 /* libPods-DiaCats.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DiaCats.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		601C595B1DA64DF1004B36BB /* DiaCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		601C595F1DA64DF1004B36BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		601C59611DA64DF1004B36BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +42,9 @@
 		601C596A1DA64DF1004B36BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		601C596D1DA64DF1004B36BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		601C596F1DA64DF1004B36BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		601C59761DA65153004B36BB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9AE7ED9DC9C58E518A6ADF74 /* Pods-DiaCats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiaCats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiaCats/Pods-DiaCats.debug.xcconfig"; sourceTree = "<group>"; };
+		AA40E9ABB2E6B0CA702321C0 /* Pods-DiaCats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiaCats.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiaCats/Pods-DiaCats.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				601C59771DA65153004B36BB /* MapKit.framework in Frameworks */,
+				482CA070E1A8B1A623578FB5 /* libPods-DiaCats.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +65,8 @@
 			children = (
 				601C595D1DA64DF1004B36BB /* DiaCats */,
 				601C595C1DA64DF1004B36BB /* Products */,
+				601C59751DA65153004B36BB /* Frameworks */,
+				A2F9BFB28F00D76A644A16F6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +102,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		601C59751DA65153004B36BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				601C59761DA65153004B36BB /* MapKit.framework */,
+				30B1B678C640060201A71703 /* libPods-DiaCats.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2F9BFB28F00D76A644A16F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AE7ED9DC9C58E518A6ADF74 /* Pods-DiaCats.debug.xcconfig */,
+				AA40E9ABB2E6B0CA702321C0 /* Pods-DiaCats.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +127,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 601C59721DA64DF1004B36BB /* Build configuration list for PBXNativeTarget "DiaCats" */;
 			buildPhases = (
+				49BCE03CDF0D6F9DB59A6327 /* [CP] Check Pods Manifest.lock */,
 				601C59571DA64DF0004B36BB /* Sources */,
 				601C59581DA64DF0004B36BB /* Frameworks */,
 				601C59591DA64DF0004B36BB /* Resources */,
+				601C598B1DA654EB004B36BB /* Embed Frameworks */,
+				73684BDA45EE22A204D404F2 /* [CP] Embed Pods Frameworks */,
+				23B0BD8754CE0285F0A02094 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -112,6 +157,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = TES78454FS;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -145,6 +195,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23B0BD8754CE0285F0A02094 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiaCats/Pods-DiaCats-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49BCE03CDF0D6F9DB59A6327 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		73684BDA45EE22A204D404F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiaCats/Pods-DiaCats-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		601C59571DA64DF0004B36BB /* Sources */ = {
@@ -271,24 +369,26 @@
 		};
 		601C59731DA64DF1004B36BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AE7ED9DC9C58E518A6ADF74 /* Pods-DiaCats.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TES78454FS;
 				INFOPLIST_FILE = DiaCats/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mobi.7apps.DiaCats;
+				PRODUCT_BUNDLE_IDENTIFIER = mobi.7apps.diacats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		601C59741DA64DF1004B36BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA40E9ABB2E6B0CA702321C0 /* Pods-DiaCats.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TES78454FS;
 				INFOPLIST_FILE = DiaCats/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mobi.7apps.DiaCats;
+				PRODUCT_BUNDLE_IDENTIFIER = mobi.7apps.diacats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -312,6 +412,7 @@
 				601C59741DA64DF1004B36BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
