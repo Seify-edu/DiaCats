@@ -9,6 +9,7 @@
 #import "FlickrViewController.h"
 #import "FKAuthViewController.h"
 #import "FlickrKit.h"
+#import "MapViewController.h"
 
 @interface FlickrViewController ()
 @property (nonatomic, strong) FKDUNetworkOperation *checkAuthOp;
@@ -26,6 +27,7 @@
     // Check if there is a stored token
     self.authButton.enabled = NO;
     [self.authLabel setText:@"Checking Flickr login..."];
+    self.searchButton.enabled = NO;
     self.checkAuthOp = [[FlickrKit sharedFlickrKit] checkAuthorizationOnCompletion:^(NSString *userName, NSString *userId, NSString *fullName, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             self.authButton.enabled = YES;
@@ -57,15 +59,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+#pragma mark - Auth
 
 - (IBAction)authPressed
 {
@@ -99,12 +93,49 @@
     self.userID = userID;
     [self.authButton setTitle:@"Logout" forState:UIControlStateNormal];
     self.authLabel.text = [NSString stringWithFormat:@"You are logged in as %@", username];
+    self.searchButton.enabled = YES;
 }
 
 - (void)userLoggedOut
 {
     [self.authButton setTitle:@"Login" forState:UIControlStateNormal];
     self.authLabel.text = @"Need to login. Use test account:\rUsername: test.diacats@gmail.com\rPass: testdiacats";
+    self.searchButton.enabled = NO;
+}
+
+#pragma mark - Search
+
+- (IBAction)searchPressed
+{
+    [self.searchTextField endEditing:YES];
+    
+    FKFlickrPhotosSearch *search = [[FKFlickrPhotosSearch alloc] init];
+    search.text = self.searchTextField.text;
+    search.per_page = @"15";
+    search.has_geo = @"1";
+    search.extras = @"geo";
+    [[FlickrKit sharedFlickrKit] call:search completion:^(NSDictionary *response, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (response) {
+                NSMutableArray *photosInfo = [NSMutableArray array];
+                for (NSDictionary *photoDictionary in [response valueForKeyPath:@"photos.photo"])
+                {
+                    MapPhotoInfo *info = [[MapPhotoInfo alloc] init];
+                    info.url = [[FlickrKit sharedFlickrKit] photoURLForSize:FKPhotoSizeSmall240 fromPhotoDictionary:photoDictionary];
+                    info.longitude = photoDictionary[@"longitude"];
+                    info.latitude = photoDictionary[@"latitude"];
+                    [photosInfo addObject:info];
+                }
+                
+                MapViewController *mvc = [[MapViewController alloc] initWithPhotosInfo:photosInfo];
+                [self.navigationController pushViewController:mvc animated:YES];
+                
+            } else {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                [alert show];
+            }
+        });
+    }];
 }
 
 

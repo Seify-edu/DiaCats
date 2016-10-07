@@ -15,11 +15,13 @@
 		601C596B1DA64DF1004B36BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 601C596A1DA64DF1004B36BB /* Assets.xcassets */; };
 		601C596E1DA64DF1004B36BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601C596C1DA64DF1004B36BB /* LaunchScreen.storyboard */; };
 		601C59771DA65153004B36BB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601C59761DA65153004B36BB /* MapKit.framework */; };
-		601C59901DA702CD004B36BB /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601C598E1DA702CD004B36BB /* MapView.xib */; };
+		601C59901DA702CD004B36BB /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601C598E1DA702CD004B36BB /* MapViewController.xib */; };
 		601C599A1DA7044E004B36BB /* FlickrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601C59981DA7044E004B36BB /* FlickrViewController.xib */; };
 		601C599E1DA70B0B004B36BB /* FlickrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C599D1DA70B0B004B36BB /* FlickrViewController.m */; };
 		601C59A21DA71149004B36BB /* FKAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C59A01DA71149004B36BB /* FKAuthViewController.m */; };
 		601C59A31DA71149004B36BB /* FKAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601C59A11DA71149004B36BB /* FKAuthViewController.xib */; };
+		601C59A61DA7CAE8004B36BB /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C59A51DA7CAE8004B36BB /* MapViewController.m */; };
+		601C59A81DA80F18004B36BB /* myimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 601C59A71DA80F18004B36BB /* myimage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,13 +50,16 @@
 		601C596D1DA64DF1004B36BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		601C596F1DA64DF1004B36BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		601C59761DA65153004B36BB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		601C598F1DA702CD004B36BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MapView.xib; sourceTree = "<group>"; };
+		601C598F1DA702CD004B36BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MapViewController.xib; sourceTree = "<group>"; };
 		601C59991DA7044E004B36BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FlickrViewController.xib; sourceTree = "<group>"; };
 		601C599C1DA70B0B004B36BB /* FlickrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrViewController.h; sourceTree = "<group>"; };
 		601C599D1DA70B0B004B36BB /* FlickrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrViewController.m; sourceTree = "<group>"; };
 		601C599F1DA71149004B36BB /* FKAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKAuthViewController.h; sourceTree = "<group>"; };
 		601C59A01DA71149004B36BB /* FKAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKAuthViewController.m; sourceTree = "<group>"; };
 		601C59A11DA71149004B36BB /* FKAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKAuthViewController.xib; sourceTree = "<group>"; };
+		601C59A41DA7CAE8004B36BB /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		601C59A51DA7CAE8004B36BB /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		601C59A71DA80F18004B36BB /* myimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = myimage.png; path = ../myimage.png; sourceTree = "<group>"; };
 		9AE7ED9DC9C58E518A6ADF74 /* Pods-DiaCats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiaCats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiaCats/Pods-DiaCats.debug.xcconfig"; sourceTree = "<group>"; };
 		AA40E9ABB2E6B0CA702321C0 /* Pods-DiaCats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiaCats.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiaCats/Pods-DiaCats.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +80,7 @@
 		601C59521DA64DF0004B36BB = {
 			isa = PBXGroup;
 			children = (
+				601C59A71DA80F18004B36BB /* myimage.png */,
 				601C595D1DA64DF1004B36BB /* DiaCats */,
 				601C595C1DA64DF1004B36BB /* Products */,
 				601C59751DA65153004B36BB /* Frameworks */,
@@ -98,7 +104,9 @@
 				601C59641DA64DF1004B36BB /* ViewController.h */,
 				601C59651DA64DF1004B36BB /* ViewController.m */,
 				601C59671DA64DF1004B36BB /* Main.storyboard */,
-				601C598E1DA702CD004B36BB /* MapView.xib */,
+				601C59A41DA7CAE8004B36BB /* MapViewController.h */,
+				601C59A51DA7CAE8004B36BB /* MapViewController.m */,
+				601C598E1DA702CD004B36BB /* MapViewController.xib */,
 				601C599C1DA70B0B004B36BB /* FlickrViewController.h */,
 				601C599D1DA70B0B004B36BB /* FlickrViewController.m */,
 				601C59981DA7044E004B36BB /* FlickrViewController.xib */,
@@ -208,7 +216,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				601C596E1DA64DF1004B36BB /* LaunchScreen.storyboard in Resources */,
-				601C59901DA702CD004B36BB /* MapView.xib in Resources */,
+				601C59901DA702CD004B36BB /* MapViewController.xib in Resources */,
+				601C59A81DA80F18004B36BB /* myimage.png in Resources */,
 				601C596B1DA64DF1004B36BB /* Assets.xcassets in Resources */,
 				601C59A31DA71149004B36BB /* FKAuthViewController.xib in Resources */,
 				601C599A1DA7044E004B36BB /* FlickrViewController.xib in Resources */,
@@ -274,6 +283,7 @@
 				601C59A21DA71149004B36BB /* FKAuthViewController.m in Sources */,
 				601C59661DA64DF1004B36BB /* ViewController.m in Sources */,
 				601C59631DA64DF1004B36BB /* AppDelegate.m in Sources */,
+				601C59A61DA7CAE8004B36BB /* MapViewController.m in Sources */,
 				601C59601DA64DF1004B36BB /* main.m in Sources */,
 				601C599E1DA70B0B004B36BB /* FlickrViewController.m in Sources */,
 			);
@@ -298,12 +308,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		601C598E1DA702CD004B36BB /* MapView.xib */ = {
+		601C598E1DA702CD004B36BB /* MapViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				601C598F1DA702CD004B36BB /* Base */,
 			);
-			name = MapView.xib;
+			name = MapViewController.xib;
 			sourceTree = "<group>";
 		};
 		601C59981DA7044E004B36BB /* FlickrViewController.xib */ = {

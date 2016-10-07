@@ -10,12 +10,14 @@
             <connections>
                 <outlet property="authButton" destination="M5X-Fc-ejQ" id="2si-nD-ePg"/>
                 <outlet property="authLabel" destination="ld2-fp-wtd" id="8V6-gX-etw"/>
+                <outlet property="searchButton" destination="CQs-Da-HDK" id="my5-0U-ysr"/>
+                <outlet property="searchTextField" destination="EzZ-jN-1vZ" id="ErF-uM-Kvn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5X-Fc-ejQ">
@@ -29,14 +31,34 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EzZ-jN-1vZ">
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="5hz-D3-K6g"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQs-Da-HDK">
+                    <state key="normal" title="Search"/>
+                    <connections>
+                        <action selector="searchPressed" destination="-1" eventType="touchUpInside" id="ygm-b5-na4"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ld2-fp-wtd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0mx-aS-7pM"/>
+                <constraint firstItem="CQs-Da-HDK" firstAttribute="leading" secondItem="EzZ-jN-1vZ" secondAttribute="trailing" constant="8" id="QWC-fH-pyH"/>
+                <constraint firstItem="CQs-Da-HDK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="247" id="chP-eI-KoB"/>
+                <constraint firstItem="CQs-Da-HDK" firstAttribute="centerY" secondItem="EzZ-jN-1vZ" secondAttribute="centerY" id="h6I-Mi-TGD"/>
+                <constraint firstAttribute="trailing" secondItem="CQs-Da-HDK" secondAttribute="trailing" constant="20" id="i4x-Ys-vde"/>
                 <constraint firstItem="M5X-Fc-ejQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jRL-li-Q16"/>
                 <constraint firstItem="ld2-fp-wtd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="m1s-hT-mZr"/>
                 <constraint firstItem="M5X-Fc-ejQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="mmz-IS-pW4"/>
+                <constraint firstItem="EzZ-jN-1vZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="zFj-td-Ohp"/>
             </constraints>
+            <point key="canvasLocation" x="24" y="51"/>
         </view>
     </objects>
 </document>
