@@ -13,5 +13,6 @@
 
 + (PhotosInfo *)cachedPhotosInfoForText:(NSString *)text;
 + (void)cachePhotosInfo:(PhotosInfo *)photosInfo forText:(NSString *)text;
++ (void)startNewSession;
 
 @end

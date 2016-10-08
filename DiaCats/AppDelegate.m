@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "FlickrKit.h"
 #import "FlickrViewController.h"
+#import "DCCacheManager.h"
 
 @interface AppDelegate ()
 
@@ -24,8 +25,9 @@
     NSString *secret = @"a47352efa848cd60";
     [[FlickrKit sharedFlickrKit] initializeWithAPIKey:apiKey sharedSecret:secret];
     
+    [DCCacheManager startNewSession];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     FlickrViewController *fvc = [[FlickrViewController alloc] initWithNibName:@"FlickrViewController" bundle:nil];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:fvc];
     self.window.rootViewController = nc;
@@ -51,7 +53,8 @@
 }
 
 
-- (void)applicationDidBecomeActive:(UIApplication *)application {
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 - (void)applicationWillTerminate:(UIApplication *)application {
