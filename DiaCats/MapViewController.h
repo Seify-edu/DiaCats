@@ -8,21 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "MapKit/MapKit.h"
+#import "PhotosInfo.h"
 
 @interface PhotoAnnotation : NSObject <MKAnnotation>
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 @property (nonatomic, strong) UIImage *image;
 @end
 
-@interface MapPhotoInfo : NSObject
-@property (nonatomic, strong) NSURL *url;
-@property (nonatomic, strong) NSString *longitude;
-@property (nonatomic, strong) NSString *latitude;
-@end
-
 @interface MapViewController : UIViewController
 
 @property (weak) IBOutlet MKMapView *mapView;
-- (instancetype)initWithPhotosInfo:(NSArray *)photosInfo;
+- (instancetype)initWithPhotosInfo:(PhotosInfo *)photosInfo;
 
 @end

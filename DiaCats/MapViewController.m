@@ -8,20 +8,18 @@
 
 #import "MapViewController.h"
 #import "MapKit/MapKit.h"
+#import "PhotosInfo.h"
 
 @implementation PhotoAnnotation
 @end
 
-@implementation MapPhotoInfo
-@end
-
 @interface MapViewController()<MKMapViewDelegate>
-@property (strong) NSArray *photosInfo;
+@property (strong) PhotosInfo *photosInfo;
 @end
 
 @implementation MapViewController
 
-- (instancetype)initWithPhotosInfo:(NSArray *)photosInfo
+- (instancetype)initWithPhotosInfo:(PhotosInfo *)photosInfo
 {
     if ( self = [super init] )
     {
@@ -35,7 +33,7 @@
 {
     [super viewDidLoad];
     
-    for ( MapPhotoInfo *info in self.photosInfo )
+    for ( MapPhotoInfo *info in self.photosInfo.info )
     {
         NSURLRequest *request = [NSURLRequest requestWithURL:info.url];
         [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
