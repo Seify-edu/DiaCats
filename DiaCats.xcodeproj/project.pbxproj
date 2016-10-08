@@ -18,8 +18,6 @@
 		601C59901DA702CD004B36BB /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601C598E1DA702CD004B36BB /* MapViewController.xib */; };
 		601C599A1DA7044E004B36BB /* FlickrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601C59981DA7044E004B36BB /* FlickrViewController.xib */; };
 		601C599E1DA70B0B004B36BB /* FlickrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C599D1DA70B0B004B36BB /* FlickrViewController.m */; };
-		601C59A21DA71149004B36BB /* FKAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C59A01DA71149004B36BB /* FKAuthViewController.m */; };
-		601C59A31DA71149004B36BB /* FKAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601C59A11DA71149004B36BB /* FKAuthViewController.xib */; };
 		601C59A61DA7CAE8004B36BB /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C59A51DA7CAE8004B36BB /* MapViewController.m */; };
 		601C59B91DA831A9004B36BB /* DCCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C59B81DA831A9004B36BB /* DCCacheManager.m */; };
 		601C59BC1DA8FCDE004B36BB /* PhotosInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C59BB1DA8FCDE004B36BB /* PhotosInfo.m */; };
@@ -55,9 +53,6 @@
 		601C59991DA7044E004B36BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FlickrViewController.xib; sourceTree = "<group>"; };
 		601C599C1DA70B0B004B36BB /* FlickrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrViewController.h; sourceTree = "<group>"; };
 		601C599D1DA70B0B004B36BB /* FlickrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrViewController.m; sourceTree = "<group>"; };
-		601C599F1DA71149004B36BB /* FKAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKAuthViewController.h; sourceTree = "<group>"; };
-		601C59A01DA71149004B36BB /* FKAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKAuthViewController.m; sourceTree = "<group>"; };
-		601C59A11DA71149004B36BB /* FKAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKAuthViewController.xib; sourceTree = "<group>"; };
 		601C59A41DA7CAE8004B36BB /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		601C59A51DA7CAE8004B36BB /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		601C59B71DA831A9004B36BB /* DCCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCacheManager.h; sourceTree = "<group>"; };
@@ -115,9 +110,6 @@
 				601C599C1DA70B0B004B36BB /* FlickrViewController.h */,
 				601C599D1DA70B0B004B36BB /* FlickrViewController.m */,
 				601C59981DA7044E004B36BB /* FlickrViewController.xib */,
-				601C599F1DA71149004B36BB /* FKAuthViewController.h */,
-				601C59A01DA71149004B36BB /* FKAuthViewController.m */,
-				601C59A11DA71149004B36BB /* FKAuthViewController.xib */,
 				601C59B71DA831A9004B36BB /* DCCacheManager.h */,
 				601C59B81DA831A9004B36BB /* DCCacheManager.m */,
 				601C596A1DA64DF1004B36BB /* Assets.xcassets */,
@@ -225,7 +217,6 @@
 				601C596E1DA64DF1004B36BB /* LaunchScreen.storyboard in Resources */,
 				601C59901DA702CD004B36BB /* MapViewController.xib in Resources */,
 				601C596B1DA64DF1004B36BB /* Assets.xcassets in Resources */,
-				601C59A31DA71149004B36BB /* FKAuthViewController.xib in Resources */,
 				601C599A1DA7044E004B36BB /* FlickrViewController.xib in Resources */,
 				601C59691DA64DF1004B36BB /* Main.storyboard in Resources */,
 			);
@@ -288,7 +279,6 @@
 			files = (
 				601C59BC1DA8FCDE004B36BB /* PhotosInfo.m in Sources */,
 				601C59B91DA831A9004B36BB /* DCCacheManager.m in Sources */,
-				601C59A21DA71149004B36BB /* FKAuthViewController.m in Sources */,
 				601C59661DA64DF1004B36BB /* ViewController.m in Sources */,
 				601C59631DA64DF1004B36BB /* AppDelegate.m in Sources */,
 				601C59A61DA7CAE8004B36BB /* MapViewController.m in Sources */,

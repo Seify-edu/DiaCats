@@ -10,11 +10,8 @@
 
 @interface FlickrViewController : UIViewController
 
-@property (nonatomic, weak) IBOutlet UILabel *authLabel;
-@property (nonatomic, weak) IBOutlet UIButton *authButton;
 @property (nonatomic, weak) IBOutlet UIButton *searchButton;
 @property (nonatomic, weak) IBOutlet UITextField *searchTextField;
-- (IBAction)authPressed;
 - (IBAction)searchPressed;
 
 @end

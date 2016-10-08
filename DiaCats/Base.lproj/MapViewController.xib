@@ -17,15 +17,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vfp-Cx-S6u">
-                    <frame key="frameInset" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vfp-Cx-S6u">
                     <connections>
                         <outlet property="delegate" destination="-1" id="rg7-wm-bPj"/>
                     </connections>
                 </mapView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vfp-Cx-S6u" secondAttribute="bottom" id="Fep-Ca-J4h"/>
+                <constraint firstItem="vfp-Cx-S6u" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="c6s-mY-we2"/>
+                <constraint firstAttribute="trailing" secondItem="vfp-Cx-S6u" secondAttribute="trailing" id="jKk-Te-lVi"/>
+                <constraint firstItem="vfp-Cx-S6u" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="t9q-WL-0I0"/>
+            </constraints>
             <point key="canvasLocation" x="25.5" y="52.5"/>
         </view>
     </objects>
