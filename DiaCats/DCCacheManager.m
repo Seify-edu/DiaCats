@@ -15,7 +15,7 @@
 {
     NSString *cachesDir = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     NSString *cacheDir = [cachesDir stringByAppendingPathComponent:@"DCCache"];
-    NSLog(@"cacheDir = %@", cacheDir);
+
     if ( ![[NSFileManager defaultManager] fileExistsAtPath:cacheDir] )
     {
         NSError *error;
@@ -30,25 +30,6 @@
     }
     
     return cacheDir;
-}
-
-+ (NSDictionary *)cacheDictionary
-{
-    NSString *cacheDirectory = [self cacheDirectory];
-    NSString *pathToCacheDictionary = [cacheDirectory stringByAppendingPathComponent:@".plist"];
-    NSDictionary *cacheDictionary = [NSDictionary dictionaryWithContentsOfFile:pathToCacheDictionary];
-    
-    if ( !cacheDictionary )
-    {
-        cacheDictionary = @{};
-        if ( ![cacheDictionary writeToFile:pathToCacheDictionary atomically:YES] )
-        {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Failed to create cache" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-            [alert show];
-        };
-    }
-    
-    return cacheDictionary;
 }
     
 + (PhotosInfo *)cachedPhotosInfoForText:(NSString *)text

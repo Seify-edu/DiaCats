@@ -54,15 +54,6 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
-
-- (BOOL) application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    NSString *scheme = [url scheme];
-    if([@"diacats" isEqualToString:scheme]) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"UserAuthCallbackNotification" object:url userInfo:nil];
-    }
-    return YES;
-}
-
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
